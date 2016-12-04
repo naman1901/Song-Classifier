@@ -10,6 +10,9 @@ __pycache__/
 # Audio Files
 *.mp3
 
+# Test files
+test.py
+
 # Distribution / packaging
 .Python
 env/
