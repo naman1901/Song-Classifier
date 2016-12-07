@@ -1,6 +1,12 @@
 from extractfeatures import FeatureExtractor
+import os
 
-x = FeatureExtractor()
+feature_extractor = FeatureExtractor()
 
-x.read_audio("audio2.mp3")
-print(x.get_features())
+for x in ["Classical","Western"]:
+	dirs = os.listdir('/'+x+'/')
+	dirs = [files for files in dirs if "*.mp3" in files]
+	for a in dirs:
+		feature_extractor.read_audio(a)
+		with open(x+'.txt', 'a') as f:
+			f.write(feature_extractor.get_features() + '\n')
