@@ -46,14 +46,14 @@ class FeatureExtractor(object):
         # print(self.mfcc)
         # return self.mfcc
 
-    # Work in progress :P
-    # def get_delta_mfcc_features(self):
-    #     if(self.d_mfcc==None):
-    #         if(self.mfcc==None):
-    #             self.get_mfcc_features()
-    #         self.d_mfcc = delta(self.mfcc, 1)
-    #     print(self.d_mfcc)
-    #     return self.d_mfcc
+    '''Work in progress :P
+     def get_delta_mfcc_features(self):
+         if(self.d_mfcc==None):
+             if(self.mfcc==None):
+                 self.get_mfcc_features()
+             self.d_mfcc = delta(self.mfcc, 1)
+         print(self.d_mfcc)
+        return self.d_mfcc'''
 
     def build_features(self):
         if(self.mfcc==None):
